@@ -15,8 +15,8 @@ mp.events.call("CEF:NOTIFI:ADD", "success", 3000, "Текст об успехе!
 Вызов с сервера:
 ```js
 mp.events.add("playerReady", player => {
-    player.call("CEF:NOTIFI:ADD", "warning", 3000, "Текст предупреждения!", "Предупреждение!"); // вызов с серверной стороны
-    player.call("CEF:NOTIFI:ADD", "error", 3000, "Текст ошибки!", "Ошибка!"); // вызов с серверной стороны
-    player.call("CEF:NOTIFI:ADD", "success", 3000, "Текст об успехе!", "Успешно!"); // вызов с серверной стороны
+    player.call("CEF:NOTIFI:ADD", ["warning", 3000, "Текст предупреждения!", "Предупреждение!"]); // вызов с серверной стороны
+    player.call("CEF:NOTIFI:ADD", ["error", 3000, "Текст ошибки!", "Ошибка!"]); // вызов с серверной стороны
+    player.call("CEF:NOTIFI:ADD", ["success", 3000, "Текст об успехе!", "Успешно!"]); // вызов с серверной стороны
 });
 ```

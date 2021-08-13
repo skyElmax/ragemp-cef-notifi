@@ -6,6 +6,7 @@ new Vue({
         }
     },
     mounted() {
+        window.addN = this.createNotifi
         try {
             mp.events.add("addNotifi", this.createNotifi);
         } catch (e) {
