@@ -3,10 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="files/gsap.min.js"></script>
+    <script src="files/vue.js"></script>
+    <link rel="stylesheet" href="files/main.css">
 </head>
 <body>
-<div id="notification">
-
+<div id="app">
+    <transition-group name="list-complete" tag="div">
+        <div class="element" v-for="el of notifi" :key="el.message">
+            <div :class="'loader ' + el.type" :style="`width: ${el.loading}%`"></div>
+            <img :src="'files/'+ el.type +'.svg'" alt="">
+            <div class="texts">
+                <span class="title">{{ el.title }}</span>
+                <span class="message">{{ el.message }}</span>
+            </div>
+        </div>
+    </transition-group>
 </div>
+<script src="files/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,84 @@
+#app {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: fit-content;
+  margin: auto;
+  bottom: 3.704vh;
+}
+
+.element {
+  position: relative;
+  width: 41.667vh;
+  background: rgba(34, 33, 35, 0.8);
+  border-radius: 1.389vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1.852vh 3.704vh;
+  box-sizing: border-box;
+  margin-bottom: 0.926vh;
+  transition: all 0.5s;
+}
+.element .loader {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  border-radius: 15px;
+}
+.element .loader.warning {
+  background: rgba(255, 185, 67, 0.2);
+}
+.element .loader.error {
+  background: rgba(174, 52, 52, 0.2);
+}
+.element .loader.success {
+  background: rgba(120, 158, 97, 0.2);
+}
+.element img {
+  height: 3.704vh;
+  z-index: 1;
+  margin-right: 0.926vh;
+}
+.element .texts {
+  display: flex;
+  flex-direction: column;
+  font-family: TT Norms, serif;
+  font-style: normal;
+  z-index: 1;
+  overflow-wrap: anywhere;
+}
+.element .texts .title {
+  font-weight: bold;
+  font-size: 1.481vh;
+  margin-bottom: 0.463vh;
+  color: #FFFFFF;
+}
+.element .texts .message {
+  font-weight: 500;
+  font-size: 1.296vh;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.list-complete-enter,
+.list-complete-leave-to {
+  opacity: 0;
+  transform: translateY(2.7778vh);
+}
+
+@font-face {
+  font-family: "TT Norms";
+  src: url("fonts/TTNorms-Bold.eot");
+  src: local("TT Norms Bold"), local("TTNorms-Bold"), url("fonts/TTNorms-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/TTNorms-Bold.woff") format("woff"), url("fonts/TTNorms-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Norms";
+  src: url("fonts/TTNorms-Medium.eot");
+  src: local("TT Norms Medium"), local("TTNorms-Medium"), url("fonts/TTNorms-Medium.eot?#iefix") format("embedded-opentype"), url("fonts/TTNorms-Medium.woff") format("woff"), url("fonts/TTNorms-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/*# sourceMappingURL=main.css.map */
