@@ -6,7 +6,11 @@ new Vue({
         }
     },
     mounted() {
-        window.addN = this.createNotifi;
+        try {
+            mp.events.add("addNotifi", this.createNotifi);
+        } catch (e) {
+        }
+
     },
     methods: {
         createNotifi(type, time, message, title = "Уведомление") {
@@ -23,8 +27,6 @@ new Vue({
             })
         }
     },
-    computed: {
-    },
-    watch: {
-    }
+    computed: {},
+    watch: {}
 });
